@@ -39,7 +39,7 @@ class UserRegistrationAPIView(APIView):
             # Generate token for email confirmation
             token = default_token_generator.make_token(user)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
-            confirm_link = f"https://aspirethought-backend.onrender.com/user/activate/{uid}/{token}"
+            confirm_link = f"https://aspire-thought-backend.vercel.app/user/activate/{uid}/{token}"
             
             # Send confirmation email
             email_sub = "Confirm Your Email"
